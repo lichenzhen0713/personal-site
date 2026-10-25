@@ -1,7 +1,7 @@
 # Lichenzhen / Lith — 个人主页
 
 一个手写的静态个人主页，把 `F:\web` 下的四个站点收进同一张「作品地图」：
-LCZOJ、Lith Tools、LCZOJ 官网 / 文档中心，以及 2024 年的 PHP 工具箱。
+LCZOJ、Lith Tools、LCZOJ 主页，以及 2024 年的 PHP 工具箱。
 
 - 纯 HTML / CSS / JavaScript，无框架、无构建步骤、无外链字体或统计脚本
 - 响应式布局，支持深色模式、键盘操作、`prefers-reduced-motion`
@@ -26,6 +26,15 @@ node serve.js
 $env:PORT=9000; node serve.js
 ```
 
+## 线上站点
+
+| 站点 | 地址 |
+| --- | --- |
+| 个人主页（GitHub Pages） | <https://lichenzhen0713.github.io/personal-site/> |
+| LCZOJ 在线评测系统 | <https://oj.lichenzhen.cn/> |
+| OJ 主页 | <https://lichenzhen.cn/oj> |
+| Lith Tools 在线工具箱 | <https://tools.lichenzhen.cn/> |
+
 ## 文件结构
 
 ```
@@ -47,27 +56,27 @@ personal-site/
 1. **首屏**：身份、主张、GitHub 入口，以及四个站点的索引卡
 2. **数据条**：4 个站点 / 70 个工具 / 10 种评测语言 / 15 篇文档
 3. **作品**：LCZOJ、Lith Tools 两个长项目，含截图、技术栈与真实指标
-4. **站点总览**：四个站点的定位、技术、年份与状态
+4. **站点总览**：四个站点的线上入口、定位、技术、年份与状态
 5. **关于**：个人经历、三条产品原则、常用技术与设计信条
 6. **现在**：正在做 / 正在磨 / 正在信
 7. **联系**：GitHub、Gitee、LCZOJ 仓库
 
 ## 站点的原始资料
 
-| 站点 | 本地目录 | 定位 |
-| --- | --- | --- |
-| LCZOJ | `F:\web\game` | 零第三方依赖的在线评测系统，v2.9.1，多语言判题、四类题型、三套赛制、OAuth 2.0、Docker 部署 |
-| Lith Tools | `F:\web\lith-tools` | 70 个浏览器端工具 + 博客 / 论坛 / 管理后台，React 19 + Fastify 5 + SQLite，v2.0 |
-| LCZOJ 官网 | `F:\web\oj-site` | 纯静态官网与 15 篇文档中心，零外链资源 |
-| Tools 1.0 | `F:\web\tools` | 2024 年的 PHP + MySQL 工具箱，Lith Tools 的起点，已归档 |
+| 站点 | 本地目录 | 线上地址 | 定位 |
+| --- | --- | --- | --- |
+| LCZOJ | `F:\web\game` | <https://oj.lichenzhen.cn/> | 零第三方依赖的在线评测系统，v2.9.1，多语言判题、四类题型、三套赛制、OAuth 2.0、Docker 部署 |
+| Lith Tools | `F:\web\lith-tools` | <https://tools.lichenzhen.cn/> | 70 个浏览器端工具 + 博客 / 论坛 / 管理后台，React 19 + Fastify 5 + SQLite，v2.0 |
+| LCZOJ 主页 | `F:\web\oj-site` | <https://lichenzhen.cn/oj> | OJ 主页与 15 篇文档入口，纯静态、零外链资源 |
+| Tools 1.0 | `F:\web\tools` | — | 2024 年的 PHP + MySQL 工具箱，Lith Tools 的起点，已归档 |
 
-对外链接目前只使用已经确认存在的地址：
+页面里还使用这些代码托管地址：
 
 - `https://github.com/lichenzhen0713`
 - `https://gitee.com/lichenzhen0713`
 - `https://github.com/lichenzhen0713/LCZOJ`
 
-Lith Tools 的线上地址和源码暂未公开，页面中如实写为「源码暂未公开，欢迎交流或约一个演示」，没有编造演示链接。
+Lith Tools 的源码暂未公开，但工具箱本身已上线，页面中提供了「打开工具箱」入口。
 
 ## 修改指南
 
@@ -82,10 +91,13 @@ Lith Tools 的线上地址和源码暂未公开，页面中如实写为「源码
 
 ### 改项目链接
 
-页面中的外链都写死在 HTML 里，搜索 `github.com/lichenzhen0713` 即可定位。若 Lith Tools 上线，把两处「在 GitHub 找到我」替换为线上地址，并同步修改：
+线上地址集中在三个位置：首屏索引卡、作品按钮、站点总览表。搜索以下字符串即可定位并统一替换：
 
-- 站点总览第 2 行的 `href="#lith-tools"` → 线上地址
-- 项目 2 的 `.project-note` 文案
+- `oj.lichenzhen.cn`
+- `lichenzhen.cn/oj`
+- `tools.lichenzhen.cn`
+
+GitHub / Gitee 地址搜索 `github.com/lichenzhen0713` 即可。
 
 ### 换截图
 
